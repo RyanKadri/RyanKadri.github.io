@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
+    <meta name="Description" content="An online resume for Ryan Kadri" />
+    <meta name="theme-color" content="#00695f">
+    <title>Ryan Kadri</title>
+    <style type="text/css">body, div, section, p, ol, ul, li, h1, h2, h3, h4, h5, hr {
+  margin: 0;
+  padding: 0; }
+
+ol, ul, li {
+  display: block; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: 500; }
+
+.app {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-size: 13px;
+  color: var(--document-text);
+  display: grid;
+  grid-template-areas: "personal-info main" "skills main";
+  grid-template-columns: 214px 1fr;
+  min-height: 100vh; }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+.view-online {
+  display: none; }
+
+.skills {
+  grid-area: skills; }
+
+.personal-info {
+  grid-area: personal-info; }
+
+.main-content {
+  grid-area: main; }
+
+.skills, .personal-info {
+  background-color: var(--primary);
+  border-left: none;
+  border-right: none;
+  padding: 16px;
+  z-index: 2;
+  color: white; }
+  .skills a, .skills p, .personal-info a, .personal-info p {
+    color: var(--primary-text);
+    display: inline-block;
+    white-space: pre-line;
+    text-decoration: none; }
+
+@media screen and (max-width: 900px) {
+  .app {
+    grid-template-areas: "skills" "main" "personal-info";
+    grid-template-columns: 1fr; }
+  .sidebar {
+    order: 2; }
+  .main-content {
+    order: 1; } }
+
+@media screen and (min-width: 900px), print {
+  .app {
+    max-width: 8.5in;
+    width: 8.5in;
+    max-height: 11in;
+    height: 11in;
+    overflow: hidden; } }
+
+@media screen and (min-width: 900px) {
+  body {
+    padding: 16px; } }
+
+@media screen {
+  body {
+    background-color: #c3c3c3;
+    display: flex;
+    justify-content: center; }
+  .app {
+    z-index: 2;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07); } }
+
+@media print {
+  .app {
+    overflow: hidden; }
+  .view-online {
+    display: block; } }
+:root {
+  --primary-dark: #005c53;
+  --primary: #008073;
+  --primary-light: #33ab9f;
+  --secondary-dark: #ab003c;
+  --secondary: #f50057;
+  --secondary-light: #f73378;
+  --primary-text: white;
+  --secondary-text: white;
+  --document-text: #111;
+  --document-text-light: rgba(0,0,0,0.65); }
+.detail-section {
+  margin-bottom: 8px;
+  max-width: 840px; }
+  .detail-section > header {
+    color: var(--primary);
+    font-size: 1.75em;
+    margin-bottom: 8px; }
+  .detail-section .detail-body {
+    padding: 0 16px; }
+  .detail-section p.detail-body {
+    white-space: pre-line; }
+.detail-sub-section .details {
+  margin-bottom: 8px;
+  padding-left: 16px; }
+  .detail-sub-section .details li::before {
+    content: '-';
+    margin-right: 4px; }
+.subsection-header {
+  font-size: 1.25em; }
+  .subsection-header .experience {
+    font-weight: 700;
+    font-style: normal;
+    color: var(--primary-dark);
+    margin-right: 12px; }
+  .subsection-header .location {
+    display: inline-block;
+    font-size: 0.85em;
+    margin-right: 8px; }
+  .subsection-header .position, .subsection-header .duration {
+    font-size: 0.85em;
+    color: var(--document-text-light);
+    white-space: nowrap;
+    display: inline-block; }
+  .subsection-header .duration {
+    display: block;
+    margin-bottom: 8px; }
+.minor-experience-list em {
+  font-style: normal;
+  color: var(--primary);
+  margin-right: 8px; }
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #444; }
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #ffffff; }
+
+.view-online {
+  margin-top: auto; }
+.personal-info {
+  border-top: solid 8px var(--primary-dark);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .personal-info .info-grid {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    grid-gap: 16px;
+    grid-row-gap: 16px;
+    margin-top: 24px;
+    overflow: auto; }
+    .personal-info .info-grid .fa-icon {
+      max-height: 100%;
+      max-width: 100%; }
+  .personal-info address {
+    display: inline-block;
+    font-style: normal; }
+    .personal-info address p {
+      display: inline-block; }
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-bottom: solid 8px var(--primary-dark); }
+  .skills li {
+    margin-top: 8px;
+    display: flex;
+    align-items: center; }
+    .skills li .confidence-chart {
+      margin-right: 16px;
+      height: 12px;
+      fill: white; }
+
+@media screen and (max-width: 900px) {
+  .skills ol {
+    display: grid;
+    grid-template-columns: 50% 50%; } }
+</style>
+    <link rel="shotcut icon" type="image/png" href="resume.png" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <div class="app"><div class="personal-info"><header ><h2 >Contact</h2></header> <div class="info-grid">    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512" class="fa-icon" children=""><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg> <a href="mailto:ryankadri1@gmail.com" class="email" children="">ryankadri1@gmail.com</a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 512" class="fa-icon" children=""><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg> <a href="https://github.com/ryankadri" class="github" children="">github.com/ryankadri</a></div></div> <section class="skills"><header ><h2 >Skills</h2></header> <ol ><li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 100 50 L 50 50"></path></svg> TypeScript</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 100 50 L 50 50"></path></svg> Angular</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 100 50 L 50 50"></path></svg> React</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 99.38441702975689 42.178276747988455 L 50 50"></path></svg> Java</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 90.45084971874738 20.610737385376343 L 50 50"></path></svg> Webpack</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 90.45084971874738 20.610737385376343 L 50 50"></path></svg> HTML</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 90.45084971874738 20.610737385376343 L 50 50"></path></svg> CSS</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 90.45084971874738 20.610737385376343 L 50 50"></path></svg> MySQL</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 65.45084971874738 2.447174185242325 L 50 50"></path></svg> Docker</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 65.45084971874738 2.447174185242325 L 50 50"></path></svg> MongoDB</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 65.45084971874738 2.447174185242325 L 50 50"></path></svg> AWS</li> <li ><svg viewBox="0 0 100 50" class="confidence-chart"><path d="M 0 50 A 50 50 1 0 1 50 0 L 50 50"></path></svg> GraphQL</li></ol></section> <main class="main-content"><header class="main-header"><h1 class="name">Ryan Kadri</h1> <h2 class="profession">Software Developer</h2></header> <section class="detail-section"><header >About Me</header> <p class="detail-body">I like finding unconventional solutions to unusual problems. My ideal job would allow me to develop creative software that has a positive impact on others.
+
+I love web development. I am excited about new browser capabilities, upcoming ECMAScript proposals, and TypeScript.</p></section> <section class="detail-section"><header >Experience</header> <section class="detail-body"><ol class="past-jobs"><li class="detail-sub-section"><header class="subsection-header"><em class="experience">SEI Investments</em> <i class="position">Automation Engineer / Platform Tech Lead</i> <time class="duration">June 2015 - September 2018</time></header> <ul class="details"><li >Led design and development for an automated test orchestration framework</li> <li >Acted as Tech Lead while automation team grew from 3 to 28 developers</li> <li >Trained technical and non-technical team members onshore and offshore in automated testing</li></ul></li> <li class="detail-sub-section"><header class="subsection-header"><em class="experience">NYI</em> <i class="position">Data Center Technician</i> <time class="duration">October 2013 - May 2015</time></header> <ul class="details"><li >Managed physical and virtual servers</li> <li >Responded to service tickets on the company helpdesk</li></ul></li> <li class="detail-sub-section"><header class="subsection-header"><em class="experience">Other Experience</em>  </header> <ol class="details minor-experience-list"><li ><em >Paintball Instructor</em> Helped create and manage outdoor paintball course</li> <li ><em >Archery Instructor</em> Taught archery at a Boy Scouts camp</li></ol></li></ol></section></section> <section class="detail-section"><header >Education</header> <section class="detail-body"><ol ><li class="detail-sub-section"><header class="subsection-header"><em class="experience">Rutgers University</em> <i class="position">Computer Engineering / Computer Science</i> <time class="duration">September 2011 - May 2015</time></header> <ul class="highlights"><li >Received the Rutgers Presidential Scholarship</li> <li >Minors in Math and Physics</li></ul> <strong >GPA:  3.92</strong></li></ol></section></section> <section class="detail-section"><header >Projects</header> <section class="detail-body"><ul class="project-list"><li class="detail-sub-section"><header class="subsection-header"><em class="experience">XSRT</em>  </header> <div class="details"><p >An open-source session-recording tool for web applications</p> <p >Link:  <a href="https://github.com/ryankadri/xsrt" children="">github.com/ryankadri/xsrt</a></p></div></li> <li class="detail-sub-section"><header class="subsection-header"><em class="experience">SEI Test Automation Orchestrator</em>  </header> <div class="details"><p >A test runner and workflow management tool for end-to-end automated tests at SEI. Managed thousands of tests over SEI's entire product line</p> </div></li> <li class="detail-sub-section"><header class="subsection-header"><em class="experience">SEI Angular Component Documentation Tool</em>  </header> <div class="details"><p >A static-analysis tool for creating documentation from Angular projects</p> </div></li> <li class="detail-sub-section"><header class="subsection-header"><em class="experience">This resume</em>  </header> <div class="details"><p >Built from scratch, with love</p> <p >Link:  <a href="https://github.com/ryankadri/simple-resume-builder" children="">github.com/ryankadri/simple-resume-builder</a></p></div></li></ul></section></section> <aside class="view-online">View this resume online at  <a href="https://ryankadri.github.io" children="">ryankadri.github.io</a></aside></main></div>
+  <script type="text/javascript" src="/resume-web-prod.bundle.js?4221dd017994ebfec445"></script></body>
+</html>
